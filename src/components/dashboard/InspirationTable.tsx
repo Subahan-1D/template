@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
 
-import { Children, useState } from "react"
+import {  useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 
@@ -29,10 +29,6 @@ export default function InspirationPostManagement() {
 
     const handleEdit = (id: number) => {
         console.log(`Edit post ${id}`)
-    }
-
-    const handleAddNew = (id: number) => {
-        console.log(`Add new post for ${id}`)
     }
 
     return (

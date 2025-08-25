@@ -15,8 +15,7 @@ import {
   DialogHeader,
   DialogFooter,
   DialogTitle,
-  DialogDescription,
-  DialogTrigger,
+  DialogDescription
 } from "@/components/ui/dialog";
 
 export default function UserManagement() {
