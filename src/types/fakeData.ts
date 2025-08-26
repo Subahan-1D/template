@@ -7,6 +7,7 @@ import { Users, Settings } from "lucide-react"
 import { PiChurchLight } from "react-icons/pi";
 import { BsSignpostSplit } from "react-icons/bs";
 import { User } from "./user.type";
+import { Post } from "./post.type";
 // filepath: src/path/to/me.type.ts
 export type Me = {
   id: string;
@@ -31,9 +32,9 @@ export const transactions = [
   {
     id: "TXN1003",
     date: "2025-07-03",
-    description: "Payment pending from vendor",
+    description: "Payment Blocked from vendor",
     amount: 250.0,
-    status: "Pending",
+    status: "Blocked",
   },
   {
     id: "TXN1004",
@@ -61,7 +62,7 @@ export const transactions = [
     date: "2025-07-06",
     description: "Manual adjustment",
     amount: 100.0,
-    status: "Pending",
+    status: "Blocked",
   },
   {
     id: "TXN1008",
@@ -455,3 +456,403 @@ export const users: User[] = [
     status: "Active",
   },
 ];
+
+
+export const sampleChurchPosts = [
+  {
+    "churchName": "Grace Community Church",
+    "city": "New York",
+    "createdDate": "2025-08-20",
+    "createdBy": "Admin",
+    "status": "Active"
+  },
+  {
+    "churchName": "Hillcrest Baptist Church",
+    "city": "Los Angeles",
+    "createdDate": "2025-07-15",
+    "createdBy": "Pastor John",
+    "status": "Banned"
+  },
+  {
+    "churchName": "Hope Fellowship",
+    "city": "Chicago",
+    "createdDate": "2025-06-10",
+    "createdBy": "Sarah Miller",
+    "status": "Active"
+  },
+  {
+    "churchName": "St. Peter's Church",
+    "city": "Houston",
+    "createdDate": "2025-05-05",
+    "createdBy": "Michael Brown",
+    "status": "Banned"
+  },
+  {
+    "churchName": "Faith Bible Church",
+    "city": "Dallas",
+    "createdDate": "2025-04-01",
+    "createdBy": "Admin",
+    "status": "Active"
+  },
+  {
+    "churchName": "Grace Community Church",
+    "city": "New York",
+    "createdDate": "2025-08-20",
+    "createdBy": "Admin",
+    "status": "Active"
+  },
+  {
+    "churchName": "Hillcrest Baptist Church",
+    "city": "Los Angeles",
+    "createdDate": "2025-07-15",
+    "createdBy": "Pastor John",
+    "status": "Banned"
+  },
+  {
+    "churchName": "Hope Fellowship",
+    "city": "Chicago",
+    "createdDate": "2025-06-10",
+    "createdBy": "Sarah Miller",
+    "status": "Active"
+  },
+  {
+    "churchName": "St. Peter's Church",
+    "city": "Houston",
+    "createdDate": "2025-05-05",
+    "createdBy": "Michael Brown",
+    "status": "Banned"
+  },
+  {
+    "churchName": "Faith Bible Church",
+    "city": "Dallas",
+    "createdDate": "2025-04-01",
+    "createdBy": "Admin",
+    "status": "Active"
+  },
+  {
+    "churchName": "St. Peter's Church",
+    "city": "Houston",
+    "createdDate": "2025-05-05",
+    "createdBy": "Michael Brown",
+    "status": "Banned"
+  },
+  {
+    "churchName": "Faith Bible Church",
+    "city": "Dallas",
+    "createdDate": "2025-04-01",
+    "createdBy": "Admin",
+    "status": "Active"
+  },
+  {
+    "churchName": "Grace Community Church",
+    "city": "New York",
+    "createdDate": "2025-08-20",
+    "createdBy": "Admin",
+    "status": "Active"
+  },
+  {
+    "churchName": "Hillcrest Baptist Church",
+    "city": "Los Angeles",
+    "createdDate": "2025-07-15",
+    "createdBy": "Pastor John",
+    "status": "Banned"
+  },
+  {
+    "churchName": "Hope Fellowship",
+    "city": "Chicago",
+    "createdDate": "2025-06-10",
+    "createdBy": "Sarah Miller",
+    "status": "Active"
+  },
+  {
+    "churchName": "St. Peter's Church",
+    "city": "Houston",
+    "createdDate": "2025-05-05",
+    "createdBy": "Michael Brown",
+    "status": "Banned"
+  },
+  {
+    "churchName": "Faith Bible Church",
+    "city": "Dallas",
+    "createdDate": "2025-04-01",
+    "createdBy": "Admin",
+    "status": "Active"
+  }
+]
+
+export const groupManagementData = [
+  {
+    "id": 1,
+    "groupName": "Youth Fellowship",
+    "groupMember": 25,
+    "createdDate": "2024-01-15",
+    "createdBy": "John Doe",
+    "status": "Active"
+  },
+  {
+    "id": 2,
+    "groupName": "Choir Group",
+    "groupMember": 18,
+    "createdDate": "2024-02-10",
+    "createdBy": "Sarah Miller",
+    "status": "Banned"
+  },
+  {
+    "id": 3,
+    "groupName": "Bible Study Group",
+    "groupMember": 12,
+    "createdDate": "2024-03-22",
+    "createdBy": "Michael Brown",
+    "status": "Active"
+  },
+  {
+    "id": 4,
+    "groupName": "Sunday School Teachers",
+    "groupMember": 9,
+    "createdDate": "2024-04-05",
+    "createdBy": "Emily Johnson",
+    "status": "Active"
+  },
+  {
+    "id": 5,
+    "groupName": "Prayer Warriors",
+    "groupMember": 14,
+    "createdDate": "2024-05-01",
+    "createdBy": "Daniel Smith",
+    "status": "Banned"
+  },
+  {
+    "id": 6,
+    "groupName": "Church Volunteers",
+    "groupMember": 30,
+    "createdDate": "2024-05-18",
+    "createdBy": "Olivia White",
+    "status": "Active"
+  },
+  {
+    "id": 7,
+    "groupName": "Youth Choir",
+    "groupMember": 20,
+    "createdDate": "2024-06-02",
+    "createdBy": "James Anderson",
+    "status": "Active"
+  },
+  {
+    "id": 8,
+    "groupName": "Community Outreach",
+    "groupMember": 15,
+    "createdDate": "2024-06-14",
+    "createdBy": "Sophia Wilson",
+    "status": "Banned"
+  },
+  {
+    "id": 9,
+    "groupName": "Men’s Fellowship",
+    "groupMember": 22,
+    "createdDate": "2024-07-01",
+    "createdBy": "Robert Garcia",
+    "status": "Active"
+  },
+  {
+    "id": 10,
+    "groupName": "Women’s Fellowship",
+    "groupMember": 27,
+    "createdDate": "2024-07-20",
+    "createdBy": "Isabella Martinez",
+    "status": "Active"
+  },
+  {
+    "id": 11,
+    "groupName": "Children’s Ministry",
+    "groupMember": 40,
+    "createdDate": "2024-08-05",
+    "createdBy": "William Thomas",
+    "status": "Banned"
+  },
+  {
+    "id": 12,
+    "groupName": "Drama Team",
+    "groupMember": 10,
+    "createdDate": "2024-08-25",
+    "createdBy": "Charlotte Taylor",
+    "status": "Active"
+  },
+  {
+    "id": 13,
+    "groupName": "Media Team",
+    "groupMember": 7,
+    "createdDate": "2024-09-10",
+    "createdBy": "David Lee",
+    "status": "Active"
+  },
+  {
+    "id": 14,
+    "groupName": "Hospital Ministry",
+    "groupMember": 16,
+    "createdDate": "2024-09-29",
+    "createdBy": "Amelia Harris",
+    "status": "Banned"
+  },
+  {
+    "id": 15,
+    "groupName": "Tech Support",
+    "groupMember": 11,
+    "createdDate": "2024-10-11",
+    "createdBy": "Alexander Clark",
+    "status": "Active"
+  },
+  {
+    "id": 16,
+    "groupName": "Worship Team",
+    "groupMember": 13,
+    "createdDate": "2024-10-27",
+    "createdBy": "Mia Lewis",
+    "status": "Active"
+  },
+  {
+    "id": 17,
+    "groupName": "Event Organizers",
+    "groupMember": 8,
+    "createdDate": "2024-11-05",
+    "createdBy": "Benjamin Hall",
+    "status": "Banned"
+  },
+  {
+    "id": 18,
+    "groupName": "Food Distribution",
+    "groupMember": 19,
+    "createdDate": "2024-11-20",
+    "createdBy": "Evelyn Young",
+    "status": "Active"
+  },
+  {
+    "id": 19,
+    "groupName": "Counseling Team",
+    "groupMember": 6,
+    "createdDate": "2024-12-02",
+    "createdBy": "Henry King",
+    "status": "Active"
+  },
+  {
+    "id": 20,
+    "groupName": "Missionary Support",
+    "groupMember": 21,
+    "createdDate": "2024-12-18",
+    "createdBy": "Ella Scott",
+    "status": "Banned"
+  },
+  {
+    "id": 21,
+    "groupName": "Library Committee",
+    "groupMember": 5,
+    "createdDate": "2025-01-03",
+    "createdBy": "Samuel Green",
+    "status": "Active"
+  },
+  {
+    "id": 22,
+    "groupName": "Music Band",
+    "groupMember": 17,
+    "createdDate": "2025-01-14",
+    "createdBy": "Grace Adams",
+    "status": "Active"
+  },
+  {
+    "id": 23,
+    "groupName": "Fundraising Team",
+    "groupMember": 9,
+    "createdDate": "2025-01-29",
+    "createdBy": "Matthew Baker",
+    "status": "Banned"
+  },
+  {
+    "id": 24,
+    "groupName": "Decoration Team",
+    "groupMember": 4,
+    "createdDate": "2025-02-10",
+    "createdBy": "Chloe Nelson",
+    "status": "Active"
+  },
+  {
+    "id": 25,
+    "groupName": "Transportation Team",
+    "groupMember": 6,
+    "createdDate": "2025-02-22",
+    "createdBy": "Joseph Carter",
+    "status": "Active"
+  },
+  {
+    "id": 26,
+    "groupName": "Security Team",
+    "groupMember": 12,
+    "createdDate": "2025-03-03",
+    "createdBy": "Victoria Perez",
+    "status": "Banned"
+  },
+  {
+    "id": 27,
+    "groupName": "Greeters",
+    "groupMember": 14,
+    "createdDate": "2025-03-15",
+    "createdBy": "Andrew Roberts",
+    "status": "Active"
+  },
+  {
+    "id": 28,
+    "groupName": "Cleaning Crew",
+    "groupMember": 10,
+    "createdDate": "2025-03-25",
+    "createdBy": "Sofia Turner",
+    "status": "Active"
+  },
+  {
+    "id": 29,
+    "groupName": "Pastoral Team",
+    "groupMember": 3,
+    "createdDate": "2025-04-07",
+    "createdBy": "Christopher Phillips",
+    "status": "Banned"
+  },
+  {
+    "id": 30,
+    "groupName": "Church Board",
+    "groupMember": 7,
+    "createdDate": "2025-04-20",
+    "createdBy": "Abigail Evans",
+    "status": "Active"
+  }
+]
+
+export const samplePosts: Post[] = [
+  { id: 1, userName: "Sarah Miller", date: "2025-08-01", post: "Church event update", postUs: "Hillcrest Kent", status: "Approved" },
+  { id: 2, userName: "James Smith", date: "2025-08-02", post: "Sunday service announcement", postUs: "New Hope Church", status: "Blocked" },
+  { id: 3, userName: "Emily Johnson", date: "2025-08-03", post: "Youth group activity", postUs: "Grace Fellowship", status: "Blocked" },
+  { id: 4, userName: "Michael Brown", date: "2025-08-04", post: "Fundraising program", postUs: "Faith Community", status: "Blocked" },
+  { id: 5, userName: "Olivia Wilson", date: "2025-08-05", post: "Volunteer meetup", postUs: "Unity Church", status: "Approved" },
+  { id: 6, userName: "William Davis", date: "2025-08-06", post: "Bible study session", postUs: "Living Word Church", status: "Blocked" },
+  { id: 7, userName: "Sophia Martinez", date: "2025-08-07", post: "Charity drive", postUs: "St. Peter Church", status: "Blocked" },
+  { id: 8, userName: "Daniel Garcia", date: "2025-08-08", post: "Music ministry update", postUs: "Christ Community", status: "Approved" },
+  { id: 9, userName: "Isabella Rodriguez", date: "2025-08-09", post: "Children’s camp", postUs: "Holy Spirit Church", status: "Blocked" },
+  { id: 10, userName: "Ethan Martinez", date: "2025-08-10", post: "Prayer meeting", postUs: "Hope Church", status: "Blocked" },
+  { id: 11, userName: "Mia Hernandez", date: "2025-08-11", post: "Community outreach", postUs: "Grace Chapel", status: "Approved" },
+  { id: 12, userName: "Alexander Lopez", date: "2025-08-12", post: "Leadership training", postUs: "Faith Mission", status: "Blocked" },
+  { id: 13, userName: "Charlotte Gonzalez", date: "2025-08-13", post: "Special guest speaker", postUs: "Christ Redeemer", status: "Blocked" },
+  { id: 14, userName: "Benjamin Clark", date: "2025-08-14", post: "Gospel concert", postUs: "New Life Church", status: "Approved" },
+  { id: 15, userName: "Amelia Lewis", date: "2025-08-15", post: "Marriage seminar", postUs: "St. Mary’s Church", status: "Blocked" },
+  { id: 16, userName: "Lucas Walker", date: "2025-08-16", post: "Youth leadership camp", postUs: "Word of Faith", status: "Blocked" },
+  { id: 17, userName: "Harper Hall", date: "2025-08-17", post: "Healing service", postUs: "Living Faith", status: "Blocked" },
+  { id: 18, userName: "Henry Allen", date: "2025-08-18", post: "Christmas program", postUs: "St. John’s Church", status: "Approved" },
+  { id: 19, userName: "Ella Young", date: "2025-08-19", post: "Mission trip", postUs: "Victory Chapel", status: "Blocked" },
+  { id: 20, userName: "Jack King", date: "2025-08-20", post: "Easter service", postUs: "Holy Cross", status: "Blocked" },
+  { id: 21, userName: "Avery Wright", date: "2025-08-21", post: "Family retreat", postUs: "Blessed Hope Church", status: "Blocked" },
+  { id: 22, userName: "Sebastian Scott", date: "2025-08-22", post: "Gospel outreach", postUs: "Faith Revival", status: "Approved" },
+  { id: 23, userName: "Grace Green", date: "2025-08-23", post: "Men’s fellowship", postUs: "Glory Church", status: "Blocked" },
+  { id: 24, userName: "David Adams", date: "2025-08-24", post: "Women’s fellowship", postUs: "Peace Chapel", status: "Blocked" },
+  { id: 25, userName: "Scarlett Baker", date: "2025-08-25", post: "Baptism ceremony", postUs: "Trinity Church", status: "Blocked" },
+  { id: 26, userName: "Matthew Nelson", date: "2025-08-26", post: "Choir practice", postUs: "Redeemer Church", status: "Approved" },
+  { id: 27, userName: "Chloe Carter", date: "2025-08-27", post: "Community dinner", postUs: "Grace Mission", status: "Blocked" },
+  { id: 28, userName: "Samuel Mitchell", date: "2025-08-28", post: "Leadership summit", postUs: "New Covenant", status: "Blocked" },
+  { id: 29, userName: "Lily Perez", date: "2025-08-29", post: "Pastor’s anniversary", postUs: "House of Prayer", status: "Blocked" },
+  { id: 30, userName: "Daniel Roberts", date: "2025-08-30", post: "Church picnic", postUs: "Grace Family Church", status: "Approved" },
+]
+

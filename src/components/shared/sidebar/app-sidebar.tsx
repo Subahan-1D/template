@@ -16,6 +16,9 @@ import {
   User,
   Sun,
   Users,
+  Church,
+  UsersRound ,
+  Warehouse
 } from "lucide-react";
 import Image from "next/image";
 import { NavMain } from "./nav-main";
@@ -39,6 +42,21 @@ const data = {
         title: "User Management",
         url: "/dashboard/users",
         icon: User,
+      },
+      {
+        title: "Church Management",
+        url: "/dashboard/churches",
+        icon: Church,
+      },
+      {
+        title: "Group Management",
+        url: "/dashboard/help",
+        icon: UsersRound,
+      },
+      {
+        title: "Post Management",
+        url: "/dashboard/posts",
+        icon: Warehouse,
       },
       {
         title: "Go Back To Home",
