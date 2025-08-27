@@ -57,7 +57,10 @@ export default function PostManagement() {
         <div className="min-h-screen bg-gray-50 p-6">
             {/* Header */}
             <div className="flex items-center justify-between mb-6">
-                <h1 className="text-2xl font-semibold text-gray-900">post Management .. Regular Post</h1>
+                <h1 className="text-2xl font-semibold text-gray-900">
+                    Post Management <span className="text-black">&gt;</span> Regular Post
+                </h1>
+
                 <div className="flex items-center gap-4">
                     <Button variant="ghost" size="sm" className="text-gray-500 flex items-center gap-1" onClick={handleSortToggle}>
                         Sort <ArrowDown className="w-2 h-2" />
@@ -82,7 +85,7 @@ export default function PostManagement() {
                 <Table className="w-full text-sm text-gray-700">
                     <TableHeader>
                         <TableRow className="bg-gray-50 border-b">
-                            <TableHead className="py-3 px-4 text-left font-medium text-gray-600">postName</TableHead>
+                            <TableHead className="py-3 px-4 text-left font-medium text-gray-600">User Name</TableHead>
                             <TableHead className="py-3 px-4 text-left font-medium text-gray-600">Date</TableHead>
                             <TableHead className="py-3 px-4 text-left font-medium text-gray-600">Post</TableHead>
                             <TableHead className="py-3 px-4 text-left font-medium text-gray-600">Post Us</TableHead>
@@ -92,8 +95,8 @@ export default function PostManagement() {
                     </TableHeader>
 
                     <TableBody>
-                        {currentPosts.map((post, idx) => (
-                            <TableRow key={post.id} className={idx % 2 === 0 ? "bg-white hover:bg-gray-50" : "bg-gray-50/50 hover:bg-gray-50"}>
+                        {currentPosts.map((post) => (
+                            <TableRow key={post.id}className="hover:bg-gray-50 border-0 bg-transparent">
                                 <TableCell className="py-3 px-4">
                                     <div className="flex items-center gap-3">
                                         <Avatar className="w-8 h-8">

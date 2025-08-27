@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
 
-import {  useState } from "react"
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 
@@ -63,10 +63,10 @@ export default function InspirationPostManagement() {
                         </TableRow>
                     </TableHeader>
                     <TableBody>
-                        {currentPosts.map((post: any, index: number) => (
+                        {currentPosts.map((post: any,) => (
                             <TableRow
                                 key={post.id}
-                                className={` hover:bg-gray-50 ${index % 2 === 0 ? "bg-white" : "bg-gray-50/30"}`}
+                                className="hover:bg-gray-50 border-0 bg-transparent"
                             >
                                 <TableCell className="py-4 px-6 text-gray-900 font-medium">{post.date}</TableCell>
                                 <TableCell className="py-4 px-6 text-gray-900">{post.title}</TableCell>

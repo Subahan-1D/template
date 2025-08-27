@@ -1,3 +1,4 @@
+
 import { NotificationItem } from "./me.type";
 import { RiInstagramFill } from "react-icons/ri";
 import { Mail } from "lucide-react";
@@ -8,6 +9,7 @@ import { PiChurchLight } from "react-icons/pi";
 import { BsSignpostSplit } from "react-icons/bs";
 import { User } from "./user.type";
 import { Post } from "./post.type";
+import { Question } from "./qa.type";
 // filepath: src/path/to/me.type.ts
 export type Me = {
   id: string;
@@ -856,3 +858,275 @@ export const samplePosts: Post[] = [
   { id: 30, userName: "Daniel Roberts", date: "2025-08-30", post: "Church picnic", postUs: "Grace Family Church", status: "Approved" },
 ]
 
+export const QuestionAndAnswerData :Question[] = [
+  {
+    "id": 1,
+    "userName": "John Doe",
+    "date": "2025-08-01",
+    "question": "How to integrate Redux in Next.js?",
+    "category": "Frontend",
+    "postUs": "Student",
+    "status": "Approved"
+  },
+  {
+    "id": 2,
+    "userName": "Jane Smith",
+    "date": "2025-08-02",
+    "question": "What is the difference between useEffect and useLayoutEffect?",
+    "category": "React",
+    "postUs": "Developer",
+    "status": "Blocked"
+  },
+  {
+    "id": 3,
+    "userName": "Michael Johnson",
+    "date": "2025-08-03",
+    "question": "How do you handle authentication with JWT?",
+    "category": "Backend",
+    "postUs": "Student",
+    "status": "Approved"
+  },
+  {
+    "id": 4,
+    "userName": "Emily Davis",
+    "date": "2025-08-04",
+    "question": "What is the best practice for folder structure in Next.js?",
+    "category": "Frontend",
+    "postUs": "Developer",
+    "status": "Blocked"
+  },
+  {
+    "id": 5,
+    "userName": "Daniel Lee",
+    "date": "2025-08-05",
+    "question": "How to optimize MongoDB queries?",
+    "category": "Database",
+    "postUs": "Student",
+    "status": "Approved"
+  },
+  {
+    "id": 6,
+    "userName": "Sophia Wilson",
+    "date": "2025-08-06",
+    "question": "What is Redux Toolkit?",
+    "category": "Frontend",
+    "postUs": "Developer",
+    "status": "Blocked"
+  },
+  {
+    "id": 7,
+    "userName": "David Brown",
+    "date": "2025-08-07",
+    "question": "How to use React Query with Next.js?",
+    "category": "React",
+    "postUs": "Student",
+    "status": "Approved"
+  },
+  {
+    "id": 8,
+    "userName": "Olivia Taylor",
+    "date": "2025-08-08",
+    "question": "Explain middleware in Express.js",
+    "category": "Backend",
+    "postUs": "Developer",
+    "status": "Blocked"
+  },
+  {
+    "id": 9,
+    "userName": "James Miller",
+    "date": "2025-08-09",
+    "question": "Difference between SQL and NoSQL?",
+    "category": "Database",
+    "postUs": "Student",
+    "status": "Approved"
+  },
+  {
+    "id": 10,
+    "userName": "Ava Anderson",
+    "date": "2025-08-10",
+    "question": "What is Tailwind CSS?",
+    "category": "Frontend",
+    "postUs": "Developer",
+    "status": "Blocked"
+  },
+  {
+    "id": 11,
+    "userName": "Liam Martinez",
+    "date": "2025-08-11",
+    "question": "How to deploy Next.js on Vercel?",
+    "category": "Frontend",
+    "postUs": "Student",
+    "status": "Approved"
+  },
+  {
+    "id": 12,
+    "userName": "Isabella Garcia",
+    "date": "2025-08-12",
+    "question": "What is Context API in React?",
+    "category": "React",
+    "postUs": "Developer",
+    "status": "Blocked"
+  },
+  {
+    "id": 13,
+    "userName": "Ethan Martinez",
+    "date": "2025-08-13",
+    "question": "How to implement dark mode in Tailwind?",
+    "category": "Frontend",
+    "postUs": "Student",
+    "status": "Approved"
+  },
+  {
+    "id": 14,
+    "userName": "Mia Robinson",
+    "date": "2025-08-14",
+    "question": "What is REST API?",
+    "category": "Backend",
+    "postUs": "Developer",
+    "status": "Blocked"
+  },
+  {
+    "id": 15,
+    "userName": "Noah Clark",
+    "date": "2025-08-15",
+    "question": "How to use useReducer hook?",
+    "category": "React",
+    "postUs": "Student",
+    "status": "Approved"
+  },
+  {
+    "id": 16,
+    "userName": "Charlotte Lewis",
+    "date": "2025-08-16",
+    "question": "Explain Docker for beginners",
+    "category": "DevOps",
+    "postUs": "Developer",
+    "status": "Blocked"
+  },
+  {
+    "id": 17,
+    "userName": "Benjamin Walker",
+    "date": "2025-08-17",
+    "question": "What is GraphQL?",
+    "category": "Backend",
+    "postUs": "Student",
+    "status": "Approved"
+  },
+  {
+    "id": 18,
+    "userName": "Amelia Hall",
+    "date": "2025-08-18",
+    "question": "Explain Redux middleware",
+    "category": "Frontend",
+    "postUs": "Developer",
+    "status": "Blocked"
+  },
+  {
+    "id": 19,
+    "userName": "Lucas Allen",
+    "date": "2025-08-19",
+    "question": "What is the difference between React and Next.js?",
+    "category": "React",
+    "postUs": "Student",
+    "status": "Approved"
+  },
+  {
+    "id": 20,
+    "userName": "Harper Young",
+    "date": "2025-08-20",
+    "question": "Explain server-side rendering",
+    "category": "Frontend",
+    "postUs": "Developer",
+    "status": "Blocked"
+  },
+  {
+    "id": 21,
+    "userName": "Henry King",
+    "date": "2025-08-21",
+    "question": "How to optimize React performance?",
+    "category": "React",
+    "postUs": "Student",
+    "status": "Approved"
+  },
+  {
+    "id": 22,
+    "userName": "Evelyn Scott",
+    "date": "2025-08-22",
+    "question": "Difference between cookies and localStorage?",
+    "category": "Frontend",
+    "postUs": "Developer",
+    "status": "Blocked"
+  },
+  {
+    "id": 23,
+    "userName": "Alexander Green",
+    "date": "2025-08-23",
+    "question": "What is useMemo used for?",
+    "category": "React",
+    "postUs": "Student",
+    "status": "Approved"
+  },
+  {
+    "id": 24,
+    "userName": "Abigail Adams",
+    "date": "2025-08-24",
+    "question": "Explain microservices architecture",
+    "category": "Backend",
+    "postUs": "Developer",
+    "status": "Blocked"
+  },
+  {
+    "id": 25,
+    "userName": "Matthew Baker",
+    "date": "2025-08-25",
+    "question": "How to use MongoDB Atlas?",
+    "category": "Database",
+    "postUs": "Student",
+    "status": "Approved"
+  },
+  {
+    "id": 26,
+    "userName": "Ella Rivera",
+    "date": "2025-08-26",
+    "question": "What is TypeScript?",
+    "category": "Frontend",
+    "postUs": "Developer",
+    "status": "Blocked"
+  },
+  {
+    "id": 27,
+    "userName": "Jackson Perez",
+    "date": "2025-08-27",
+    "question": "Explain WebSockets in Node.js",
+    "category": "Backend",
+    "postUs": "Student",
+    "status": "Approved"
+  },
+  {
+    "id": 28,
+    "userName": "Scarlett Turner",
+    "date": "2025-08-28",
+    "question": "What is Prisma ORM?",
+    "category": "Database",
+    "postUs": "Developer",
+    "status": "Blocked"
+  },
+  {
+    "id": 29,
+    "userName": "Jack White",
+    "date": "2025-08-29",
+    "question": "How to implement lazy loading in React?",
+    "category": "React",
+    "postUs": "Student",
+    "status": "Approved"
+  },
+  {
+    "id": 30,
+    "userName": "Grace Harris",
+    "date": "2025-08-30",
+    "question": "What is CI/CD?",
+    "category": "DevOps",
+    "postUs": "Developer",
+    "status": "Blocked"
+  }
+]

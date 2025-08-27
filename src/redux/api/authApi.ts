@@ -4,7 +4,7 @@ export const authApi = baseApi.injectEndpoints({
   endpoints: (builder) => ({
     login: builder.mutation({
       query: (credentials) => ({
-        url: "/auth/login",
+        url: "/auth/login/",
         method: "POST",
         body: credentials,
       }),
@@ -64,7 +64,7 @@ export const authApi = baseApi.injectEndpoints({
     }),
     getMe: builder.query({
       query: () => ({
-        url: "/users/me",
+        url: "/auth/profile/",
         method: "GET",
       }),
       providesTags: ["User"],

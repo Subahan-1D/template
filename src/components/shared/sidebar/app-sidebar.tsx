@@ -17,8 +17,11 @@ import {
   Sun,
   Users,
   Church,
-  UsersRound ,
-  Warehouse
+  UsersRound,
+  Warehouse,
+  PlusCircle,
+  UserCog,
+  Settings
 } from "lucide-react";
 import Image from "next/image";
 import { NavMain } from "./nav-main";
@@ -27,45 +30,6 @@ import Link from "next/link";
 
 const data = {
   user: {
-    navMain: [
-      {
-        title: "Dashboard",
-        url: "/dashboard/overview",
-        icon: LayoutDashboard,
-      },
-      {
-        title: "Inspirations Management",
-        url: "/dashboard/inspiration",
-        icon: Sun,
-      },
-      {
-        title: "User Management",
-        url: "/dashboard/users",
-        icon: User,
-      },
-      {
-        title: "Church Management",
-        url: "/dashboard/churches",
-        icon: Church,
-      },
-      {
-        title: "Group Management",
-        url: "/dashboard/help",
-        icon: UsersRound,
-      },
-      {
-        title: "Post Management",
-        url: "/dashboard/posts",
-        icon: Warehouse,
-      },
-      {
-        title: "Go Back To Home",
-        url: "/",
-        icon: Home,
-      },
-    ],
-  },
-  admin: {
     navMain: [
       {
         title: "Dashboard",
@@ -98,6 +62,57 @@ const data = {
         title: "Go Back To Home",
         url: "/",
         icon: Home,
+      },
+    ],
+  },
+  admin: {
+    navMain: [
+      {
+        title: "Dashboard",
+        url: "/dashboard/overview",
+        icon: LayoutDashboard,
+      },
+      {
+        title: "Inspirations Management",
+        url: "/dashboard/inspiration",
+        icon: Sun,
+      },
+      {
+        title: "User Management",
+        url: "/dashboard/users",
+        icon: User,
+      },
+      {
+        title: "Church Management",
+        url: "/dashboard/churches",
+        icon: Church,
+      },
+      {
+        title: "Group Management",
+        url: "/dashboard/help",
+        icon: UsersRound,
+      },
+      {
+        title: "Post Management",
+        url: "/dashboard/posts",
+        icon: Warehouse,
+        items: [
+          {
+            title: "Regular Post",
+            url: "/dashboard/posts/regular",
+            icon: PlusCircle,
+          },
+          {
+            title: "Q&A Post",
+            url: "/dashboard/posts/question-answer",
+            icon: UserCog,
+          }
+        ]
+      },
+      {
+        title: "Settings",
+        url: "/dashboard/settings",
+        icon: Settings,
       },
     ],
   },

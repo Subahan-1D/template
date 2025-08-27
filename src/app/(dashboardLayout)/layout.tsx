@@ -16,7 +16,7 @@ export default function DashboardLayout({
   const token = useAppSelector((state) => state.auth.token);
   const decodedToken = useDecodedToken(token);
   const role = decodedToken?.role || "USER";
-
+  
   return (
     <SidebarProvider>
       {/* Pass the user role dynamically to AppSidebar */}

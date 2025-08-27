@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/(dashboardLayout)/dashboard/help"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/(dashboardLayout)/dashboard/help", "src/app/(dashboardLayout)/dashboard/posts/question-answer", "src/app/(dashboardLayout)/dashboard/posts/regular"],
   "exclude": ["node_modules"]
 }

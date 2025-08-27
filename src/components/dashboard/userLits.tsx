@@ -9,14 +9,8 @@ import CustomPaginations from "@/components/common/CustomPaginations";
 import { users } from "@/types/fakeData";
 import { User } from "@/types/user.type";
 import { Table, TableHeader, TableRow, TableHead, TableBody, TableCell } from "@/components/ui/table";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogFooter,
-  DialogTitle,
-  DialogDescription
-} from "@/components/ui/dialog";
+
+import { UserProfileModal } from "./user-profile-modal";
 
 export default function UserManagement() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -24,6 +18,7 @@ export default function UserManagement() {
   const [sortAsc, setSortAsc] = useState(true);
   const [selectedUser, setSelectedUser] = useState<User | null>(null);
   const [modalOpen, setModalOpen] = useState(false);
+  // Replace 'posts' with actual posts data when available
 
   const itemsPerPage = 10;
 
@@ -93,8 +88,8 @@ export default function UserManagement() {
           </TableHeader>
 
           <TableBody>
-            {currentUsers.map((user: User, idx) => (
-              <TableRow key={user.id} className={idx % 2 === 0 ? "bg-white hover:bg-gray-50" : "bg-gray-50/50 hover:bg-gray-50"}>
+            {currentUsers.map((user: User,) => (
+              <TableRow key={user.id} className="hover:bg-gray-50 border-0 bg-transparent">
                 <TableCell className="py-3 px-4">
                   <div className="flex items-center gap-3">
                     <Avatar className="w-8 h-8">
@@ -109,9 +104,8 @@ export default function UserManagement() {
                 <TableCell className="py-3 px-4 text-gray-600">{user.church}</TableCell>
                 <TableCell className="py-3 px-4">
                   <Badge
-                    className={`flex items-center justify-center w-[104px] h-[30px] gap-1 px-1 py-1 rounded-[6px] text-sm ${
-                      user.status === "Active" ? "bg-[#52C41A33] text-green-800" : "bg-[#FF4D4F33] text-red-800"
-                    }`}
+                    className={`flex items-center justify-center w-[104px] h-[30px] gap-1 px-1 py-1 rounded-[6px] text-sm ${user.status === "Active" ? "bg-[#52C41A33] text-green-800" : "bg-[#FF4D4F33] text-red-800"
+                      }`}
                   >
                     {user.status}
                   </Badge>
@@ -145,37 +139,11 @@ export default function UserManagement() {
       </div>
 
       {/* Shadcn Modal */}
-      <Dialog open={modalOpen} onOpenChange={setModalOpen}>
-        <DialogContent className="sm:max-w-md">
-          <DialogHeader>
-            <DialogTitle>User Info</DialogTitle>
-            <DialogDescription>
-              {selectedUser && (
-                <div className="space-y-2">
-                  <div className="flex items-center gap-3">
-                    <Avatar className="w-10 h-10">
-                      <AvatarImage src="/man-profile.jpg" />
-                      <AvatarFallback>{selectedUser.name.charAt(0)}</AvatarFallback>
-                    </Avatar>
-                    <div>
-                      <p className="font-medium text-gray-900">{selectedUser.name}</p>
-                      <p className="text-sm text-gray-500">{selectedUser.email}</p>
-                    </div>
-                  </div>
-                  <div className="mt-4 space-y-1 text-sm text-gray-700">
-                    <p><strong>Username:</strong> {selectedUser.username}</p>
-                    <p><strong>Church:</strong> {selectedUser.church}</p>
-                    <p><strong>Status:</strong> {selectedUser.status}</p>
-                  </div>
-                </div>
-              )}
-            </DialogDescription>
-          </DialogHeader>
-          <DialogFooter>
-            <Button onClick={() => setModalOpen(false)}>Close</Button>
-          </DialogFooter>
-        </DialogContent>
-      </Dialog>
+      <UserProfileModal
+        isOpen={modalOpen}
+        onClose={() => setModalOpen(false)}
+        user={selectedUser}
+      />
     </div>
   );
 }
